@@ -57,7 +57,7 @@ const onAdd: TabWithContentProps['onAdd'] = async () => {
     }
 }
 
-function App() {
+function TabPage() {
   
   return (
     <>
@@ -70,4 +70,4 @@ function App() {
   )
 }
 
-export default App
+export default TabPage

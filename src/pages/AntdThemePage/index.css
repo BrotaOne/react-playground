@@ -1,0 +1,16 @@
+/* html, body {
+  padding: 0;
+  margin: 0;
+  background: #000;
+}
+
+#root {
+  padding: 24px;
+} */
+
+.theme-page {
+    padding: 0;
+    margin: 0;
+    /* background: #000; */
+    height: 100vh;
+}

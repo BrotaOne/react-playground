@@ -1,21 +1,29 @@
 import { useState } from 'react'
 import { Select } from 'antd';
-import { TabPage, CanvasPage } from './pages'
+import { TabPage, CanvasPage, AntdThemePage } from './pages'
 import './App.css'
 
+const Components = [
+  TabPage, CanvasPage, AntdThemePage
+];
+
+const options = Array(Components.length).fill(0)
+  .map((_, idx) => idx)
+  .map(v => ({ value: v, label: Components[v].name }));
+
 function App() {
-  const [idx, setIdx] = useState(0);
+  const [idx, setIdx] = useState(2);
+  const Com = Components[idx];
 
   return (
     <>
       <Select
         value={idx}
         style={{ width: 200 }}
-        options={[0, 1].map(v => ({ value: v, label: v }))}
+        options={options}
         onChange={setIdx}
       />
-      {idx === 0 && <TabPage />}
-      {idx === 1 && <CanvasPage />}
+      {Components[idx] && <Com />}
     </>
   )
 }
