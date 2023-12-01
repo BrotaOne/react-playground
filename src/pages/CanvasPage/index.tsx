@@ -106,7 +106,7 @@ const CanvasPage = () => {
             // imageRef.current && ctx.drawImage(imageRef.current, 0, 0, 351.6, 31, 0, 0, 60, 5);
         
             const data = ctx.getImageData(0, 0, 400, 400);
-            const grayscale = function (pixels) {
+            const grayscale = function (pixels: ImageData) {
                 var d = pixels.data;
                 for (var i = 0; i < d.length; i += 4) {
                   var r = d[i];
