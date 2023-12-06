@@ -80,8 +80,8 @@ const CanvasPage = () => {
             ctx.fillStyle = 'blue';
             ctx.fill();
             ctx.closePath();
-
             ctx.restore();
+
             ctx.save();
             ctx.beginPath();
             ctx.moveTo(300, 300);
@@ -91,14 +91,21 @@ const CanvasPage = () => {
             ctx.closePath();
 
             ctx.clearRect(150, 150, 170, 170);
-
             ctx.restore();
+
             ctx.save();
             ctx.font = 'Bold 30px Arial';
             ctx.strokeText('hello world', 150, 150);
-
             ctx.restore();
+
             ctx.save();
+            ctx.beginPath();
+            ctx.moveTo(250, 300);
+            ctx.bezierCurveTo(200, 100, 400, 100, 400, 20);
+            ctx.stroke();
+            ctx.restore();
+
+
 
             const width = 293;
             
