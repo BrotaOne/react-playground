@@ -1,0 +1,31 @@
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+code {
+    background-color: lightgray;
+}
+
+.container {
+    margin: 20px;
+}
+
+.toolbar {
+    background-color: lightgray;
+    
+    .button {
+        width: 50px;
+    }
+
+    .active {
+        font-weight: bold;
+    }
+}

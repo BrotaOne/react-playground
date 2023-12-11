@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Select } from 'antd';
-import { TabPage, CanvasPage, AntdThemePage, ThreeJSPage, WebGLPage } from './pages'
+import { TabPage, CanvasPage, AntdThemePage, ThreeJSPage, WebGLPage, SlatePage } from './pages'
 import './App.css'
 
 const Components = [
-  TabPage, CanvasPage, AntdThemePage, ThreeJSPage, WebGLPage
+  TabPage, CanvasPage, AntdThemePage, ThreeJSPage, WebGLPage, SlatePage
 ];
 
 const options = Array(Components.length).fill(0)
@@ -12,7 +12,7 @@ const options = Array(Components.length).fill(0)
   .map(v => ({ value: v, label: Components[v].name }));
 
 function App() {
-  const [idx, setIdx] = useState<number>(4);
+  const [idx, setIdx] = useState<number>(Components.length - 1);
   const Com = Components[idx];
 
   return (
